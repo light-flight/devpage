@@ -3,7 +3,7 @@
     .info
       md-avatar.md-large
         img(src='~/assets/images/avatar.jpg', alt='Georgy Yuriev')
-      p.md-title
+      .md-title
         | Георгий Юрьев
         span.md-caption web developer
         md-subheader.location
