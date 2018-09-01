@@ -45,9 +45,11 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+
 @import "~vue-material/dist/theme/engine"; // Import the theme engine
 @include md-register-theme("default", (theme: dark));
 @import "~vue-material/dist/theme/all"; // Apply the theme
+
 .drawer-content {
   position: relative;
   .info {

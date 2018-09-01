@@ -1,10 +1,12 @@
 <template lang='pug'>
   md-app
-    md-app-drawer(md-permanent='full')
+    md-app-drawer(md-permanent='full', :md-active.sync='showNavigation')
       .background
       drawer
     md-app-content
       nuxt
+      md-button.md-icon-button(@click='showNavigation = true')
+        md-icon menu
 </template>
 
 <script>
@@ -12,7 +14,11 @@ import Drawer from '~/components/Drawer.vue'
 export default {
   components: {
     Drawer
-  }
+  },
+  data: () => ({
+    showNavigation: false,
+    showSidepanel: false
+  })
 }
 </script>
 
@@ -33,14 +39,18 @@ html {
   margin: 0;
 }
 
-.md-drawer {
-  width: 280px;
-  max-width: calc(100vw - 125px);
+.md-app {
   min-height: 100vh;
 }
 
+.md-drawer {
+  width: 280px;
+  max-width: calc(100vw - 125px);
+  height: 100vh;
+}
+
 .background {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     background-image: url(~/assets/images/3.jpg);
