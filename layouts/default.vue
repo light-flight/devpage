@@ -1,23 +1,19 @@
 <template lang='pug'>
   md-app
-    md-app-drawer(md-permanent='full', :md-active.sync='showNavigation')
-      .background
-      drawer
     md-app-content
+      greeting-block
       nuxt
-      md-button.md-icon-button(@click='showNavigation = true')
-        md-icon menu
 </template>
 
 <script>
-import Drawer from '~/components/Drawer.vue'
+import GreetingBlock from '~/components/GreetingBlock.vue'
 export default {
   components: {
-    Drawer
+    GreetingBlock
   },
   data: () => ({
-    showNavigation: false,
-    showSidepanel: false
+    // showNavigation: false,
+    // showSidepanel: false
   })
 }
 </script>
@@ -36,32 +32,14 @@ html {
 
 *, *:before, *:after {
   box-sizing: border-box;
+  padding: 0;
   margin: 0;
 }
 
-.md-app {
-  min-height: 100vh;
-}
-
-.md-drawer {
-  width: 280px;
-  max-width: calc(100vw - 125px);
-  height: 100vh;
-}
-
-.background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url(~/assets/images/3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    filter: blur(15px) brightness(0.82);
-    transform: scale(1.2);
-  }
-
 .md-app-content {
+  width: 100%;
+  overflow-x: hidden;
   font-family: 'Roboto Mono', monospace;
+  padding: 0;
 }
 </style>
