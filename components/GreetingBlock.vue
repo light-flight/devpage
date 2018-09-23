@@ -2,6 +2,7 @@
   .greeting-block
     .greeting-block__background
     .greeting-block__content
+
       md-avatar.md-large
         img(src='~/assets/images/avatar.jpg', alt='Georgy Yuriev')
       .md-title
@@ -10,20 +11,28 @@
         md-subheader.location
           md-icon person_pin_circle
           | Москва, Россия
+
       md-list
-        md-list-item
-          md-icon view_carousel
-          span.md-list-item-text Проекты
         md-divider
-        md-list-item.messengers-btns
-          md-button.md-icon-button.md-raised.tg-color-bg(:href="telegramLink")
-            md-icon.fab.fa-telegram-plane
-          md-button.md-icon-button.md-raised.whatsapp-color-bg(:href="whatsappLink")
-            md-icon.fab.fa-whatsapp
-          md-button.md-icon-button.md-raised(:href="emailLink")
+        md-list-item.one-btn-item
+          md-button.greeting-block-mail-btn(:href="emailLink")
             md-icon mail_outline
-          md-button.md-icon-button.md-raised(:href="telephoneLink")
+            span georgy.yuriev@gmail.com
+        md-list-item.one-btn-item
+          md-button(:href="telephoneLink")
             md-icon call
+            | 8 (915) 199-09-22
+          md-button.md-icon-button.md-dense(:href="telegramLink")
+            md-icon.fab.fa-telegram-plane
+          md-button.md-icon-button.md-dense(:href="whatsappLink")
+            md-icon.fab.fa-whatsapp
+
+      p.first-word
+        | Привет! Я занимаюсь реализацией бизнес-идей в вебе. Люблю делать современные интерфейсы, которыми хочется пользоваться, фанат
+        |
+        a.text-link(href="https://material.io/")
+          | Google Material Design
+        | .
 </template>
 
 <script>
@@ -71,6 +80,8 @@ export default {
 }
 
 .greeting-block__content {
+  width: 90%;
+  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -104,6 +115,21 @@ export default {
       &:hover {
         opacity: 1;
       }
+    }
+    .md-list-item-content {
+      justify-content: center;
+    }
+  }
+  .one-btn-item {
+    .md-button {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  .greeting-block-mail-btn {
+    span {
+      line-height: inherit;
+      text-transform: lowercase;
     }
   }
 }

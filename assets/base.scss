@@ -8,3 +8,21 @@ $whatsapp-color: #075e54;
 .whatsapp-color-bg {
   background-color: $whatsapp-color !important;
 }
+
+.tg-color {
+  color: $tg-color !important;
+}
+
+.whatsapp-color {
+  color: $whatsapp-color !important;
+}
+
+.text-link {
+  color: #fff !important;
+  background: linear-gradient(to top, #448aff .15em, transparent .15em, transparent);
+  &:hover {
+    text-decoration: none !important;
+    background: none;
+    background: linear-gradient(to top, darken(#448aff, 10%) .15em, transparent .15em, transparent);
+  }
+}

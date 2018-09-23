@@ -1,15 +1,12 @@
 <template lang='pug'>
   md-app
     md-app-content
-      greeting-block
       nuxt
 </template>
 
 <script>
-import GreetingBlock from '~/components/GreetingBlock.vue'
 export default {
   components: {
-    GreetingBlock
   },
   data: () => ({
     // showNavigation: false,
@@ -37,9 +34,8 @@ html {
 }
 
 .md-app-content {
-  width: 100%;
-  overflow-x: hidden;
   font-family: 'Roboto Mono', monospace;
-  padding: 0;
+  border-left: none;
+  border-right: none;
 }
 </style>
