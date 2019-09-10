@@ -8,10 +8,12 @@
 export default {
   components: {
   },
-  data: () => ({
-    // showNavigation: false,
-    // showSidepanel: false
-  })
+  data: function () {
+    return {
+      // showNavigation: false,
+      // showSidepanel: false
+    }
+  }
 }
 </script>
 
