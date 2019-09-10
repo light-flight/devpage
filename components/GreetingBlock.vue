@@ -28,11 +28,9 @@
             md-icon.fab.fa-whatsapp
 
       p.first-word
-        | Привет! Я занимаюсь реализацией бизнес-идей в вебе. Люблю делать современные интерфейсы, которыми хочется пользоваться, фанат
-        |
-        a.text-link(href="https://material.io/")
-          | Google Material Design
-        | .
+        | Привет! Я занимаюсь реализацией бизнес-идей в вебе.
+        br
+        | Люблю делать современные интерфейсы, которыми хочется пользоваться.
 </template>
 
 <script>
@@ -81,6 +79,7 @@ export default {
 
 .greeting-block__content {
   width: 90%;
+  max-width: 600px;
   margin: 0 auto;
   position: relative;
   display: flex;
