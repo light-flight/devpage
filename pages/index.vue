@@ -7,6 +7,7 @@
 import GreetingBlock from '~/components/GreetingBlock.vue'
 export default {
   data: function () {
+    return {}
   },
   components: {
     GreetingBlock
